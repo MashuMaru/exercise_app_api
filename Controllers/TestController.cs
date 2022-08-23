@@ -1,7 +1,8 @@
+using System;
+using System.Threading.Tasks;
 using exercise_app_api.Data;
 using exercise_app_api.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace exercise_app_api.Controllers
 {
@@ -19,8 +20,16 @@ namespace exercise_app_api.Controllers
         [Route("test")]
         public async Task<ActionResult<TestClass>> GetTest([FromServices] DataContext context)
         {
-            var result = await context.Users.ToListAsync();
-            return Ok(result);
+            var user = new TestClass()
+            {
+                Id = 1,
+                FirstName = "FirstName",
+                LastName = "LastName",
+                CreatedOn = DateTime.UtcNow,
+                Username = "username2022"
+            };
+            // var result = await context.Users.ToListAsync();
+            return Ok(user);
         }
 
         private readonly DataContext _context;

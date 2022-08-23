@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace exercise_app_api.Models
 {

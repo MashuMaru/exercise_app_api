@@ -1,0 +1,19 @@
+{
+  "Id": 1,
+  "UserId": 123,
+  "Workouts": [
+    {
+      "Id": 1,
+      "Workout": "Bench Press",
+      "Sessions": [
+        {
+          "SessionId": 1,
+          "Date": "21-08-2022",
+          "Sets": 4,
+          "Reps": 10,
+          "Weight": 15
+        }
+      ]
+    }
+  ]
+}
